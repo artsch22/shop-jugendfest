@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="./src/css/roboto/roboto-fontface.css">
+    <link rel="stylesheet" href="./src/css/roboto-condensed/roboto-condensed-fontface.css">
+    <link rel="stylesheet" href="./src/css/roboto-slab/roboto-slab-fontface.css">
+    <link rel="stylesheet" href="./src/css/kreatives-jugendfest/kreatives-jugendfest-fontface.css">
+	<link rel="stylesheet" href="./src/Kreatives Jugendfest Style.css">
+	<link rel="stylesheet" href="./src/shop.css">
+	<link rel="stylesheet" href="./src/basket.css">
+	<link rel="stylesheet" href="./src/cookie.css">
+	<link rel="stylesheet" href="./src/photoswipe.css">
+	<script src="./src/cookie-banner.js"></script>
+	<script src="./src/cookie.js"></script>
+	<title>Wahrenkorb Kreatives Jugendfest</title>
+</head>
+<body onload="cookiebanner(); basketContent();">
+    <div id="basket" class="basket">
+		<script src="src/shop-select.js"></script>
+		<script src="src/shop-tobasket.js"></script>
+		<script src="src/shop-basket.js"></script>
+        <script src="src/shop-alert.js"></script>
+		<button id="close" onclick="closeAlert()"></button>
+	    <div id="basket-headline" class="shop-headlines">
+		    <h1>Warenkorb</h1>
+	    </div>
+		<div id="basket-content" class="basket-content">
+            <p id="basket-content-text"><b>Dein Wahrenkorbist noch leer.</br>Gehe zum Shop und füge Artikel hinzu.</b></p>
+		</div>
+        <div class="basket-link">
+            <a id="to-shop" href="./shop.html"><span><p class="jugendfest-font"><b>zum Shop</b></p></span></a>
+            <a id="to-buy" href="./buy.html"><span><p class="jugendfest-font"><b>Kaufen</b></p></span></a>
+        </div>
+    </div>
+	<footer>
+		<div class="footergrid">
+			<p id="impressum"><a href="http://www.kirchenbezirk-pirna.de/Impressum_und_Datenschutz.422/" target="_blank">Impressum</a></p>
+			<a href="https://jugendfest.de/"><img id="logo_ejp" src="Material/Logo_Ev_Jugend_Pirna_1-farbig schwarz.png" href=""></a>
+			<a href="https://evangelische-jugend-dresden.de"><img id="logo_ejd" src="https://www.evangelische-jugend-dresden.de/typo3conf/ext/ejd_websites/Resources/Public/Images/logo_ejd.svg"></a>
+			<p>Entwickelt von Artur <a href="https://github.com/artsch22/">@artsch22</a></p>
+		</div>
+	</footer>
+</body>
+</html>

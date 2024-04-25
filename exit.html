@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="./src/css/roboto/roboto-fontface.css">
+    <link rel="stylesheet" href="./src/css/roboto-condensed/roboto-condensed-fontface.css">
+    <link rel="stylesheet" href="./src/css/roboto-slab/roboto-slab-fontface.css">
+    <link rel="stylesheet" href="./src/css/kreatives-jugendfest/kreatives-jugendfest-fontface.css">
+	<link rel="stylesheet" href="./src/Kreatives Jugendfest Style.css">
+	<link rel="stylesheet" href="./src/shop.css">
+	<link rel="stylesheet" href="./src/basket.css">
+	<link rel="stylesheet" href="./src/buy.css">
+	<link rel="stylesheet" href="./src/exit.css">
+	<link rel="stylesheet" href="./src/cookie.css">
+	<link rel="stylesheet" href="./src/photoswipe.css">
+	<script src="./src/cookie-banner.js"></script>
+	<script src="./src/cookie.js"></script>
+	<title>Kasse Kreatives Jugendfest</title>
+</head>
+<body onload='cookiebanner(); exitContent();'>
+    <div id="exit" class="exit">
+		<script src="src/shop-select.js"></script>
+		<script src="src/shop-tobasket.js"></script>
+		<script src="src/shop-basket.js"></script>
+        <script src="src/shop-alert.js"></script>
+        <script src="src/shop-buy.js"></script>
+        <script src="src/shop-exit.js"></script>
+        <script src="src/shop-send.js"></script>
+		<button id="close" onclick="closeAlert()"></button>
+	    <div id="exit-headline" class="shop-headlines">
+		    <h1>Kasse</h1>
+		</div>
+		<div id="exit-content">
+			<p id="content-headline"><b>Deine Bestellung:</b></p>	
+			<div id="exit-content-js"></div>
+			<p><b>Bezahlung:</b></br>Überweise den Betrag an </br> IBAN: DE70 35060190 1617 2000 11</br>Verwendungszweck: Jugendfestmerch [Vorname, Nachname]</p>
+		</div>
+		<div class="exit-link">
+			<p id="churchdesk-datenschutz">Mit dem Bestellen Bestätigst du die <a href="http://www.kirchenbezirk-pirna.de/Impressum_und_Datenschutz.422/" target="_blank">Datenschutzerklärung</a> des Kirchenbezirks Pirna.</p>
+			<a id="back-to-buy" href="./buy.html"><p class="jugendfest-font"><b>zurück</b></p></a>
+			<span id="send-order" onclick="sendPost();"><p class="jugendfest-font"><b>Bestellen</b></p></span>
+		</div>
+    </div>
+	<footer>
+		<div class="footergrid">
+			<p id="impressum"><a href="http://www.kirchenbezirk-pirna.de/Impressum_und_Datenschutz.422/" target="_blank">Impressum</a></p>
+			<a href="https://jugendfest.de/"><img id="logo_ejp" src="Material/Logo_Ev_Jugend_Pirna_1-farbig schwarz.png" href=""></a>
+			<a href="https://evangelische-jugend-dresden.de"><img id="logo_ejd" src="https://www.evangelische-jugend-dresden.de/typo3conf/ext/ejd_websites/Resources/Public/Images/logo_ejd.svg"></a>
+			<p>Entwickelt von Artur <a href="https://github.com/artsch22/">@artsch22</a></p>
+		</div>
+	</footer>
+</body>
+</html>

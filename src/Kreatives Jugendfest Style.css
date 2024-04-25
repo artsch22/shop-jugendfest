@@ -1,0 +1,780 @@
+@charset "utf-8";
+/* CSS Document */
+html {
+	scroll-behavior:smooth;
+	scroll-padding-top: 100px;
+}
+
+:root {
+	--akzentfarbe1: #EDAF82;
+	--akzentfarbe2: #759EB8;
+	--akzentfarbe3: #8DB580;
+	--akzentfarbe4: #885A89;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	hyphens: auto;
+	z-index: 0;
+	font-family: "Roboto";
+}
+.jugendfest-font{	
+	font-family: "Kreatives-Jugendfest"; 
+}
+h1, h2, h3, h4 {
+	font-family: "Kreatives-Jugendfest"; 
+	font-size: 4em; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: 750; 
+	line-height: 150%;
+	padding: 20px;
+	padding-top: 0px;
+}
+h1 {
+	background-color: var(--akzentfarbe4);
+	display: inline;
+	padding: .3em .5em;
+}
+h2 { 
+	font-size: 3em;
+	font-weight: 700;
+	margin: 0px;	
+	text-decoration-line: underline;
+}
+h3 { 
+	font-size: 2.5em;
+	font-weight: 700;
+}
+h4 {
+	font-size: 2em;
+	color: black;
+	padding: 20px 3vw;
+}
+
+p { 
+	font-family: "Roboto"; 
+	font-size: 2em; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: 350; 
+	line-height: 1.4em;
+	padding: 10px 20px;
+}
+p a{
+	text-decoration: none;
+  	position: relative;
+	font-weight: 700;
+	color: black;
+}
+
+.unbolt{
+	font-weight: 350; 
+}
+
+p a::before {
+	content: '';
+	background-color: var(--akzentfarbe2);
+	position: absolute;
+	left: -3%;
+	bottom: -1px;
+	width: 106%;
+	height: 2px;
+	z-index: -1;
+	transition: all .3s ease-in-out;
+  }
+p a:hover::before {
+	bottom: -1px;
+	height: 110%;
+	color: black;
+  }
+
+#shop {
+	display: grid;
+	grid-template-areas: frame;
+}
+
+.shop-frame {
+	width: 100vw;
+	height: 100vh;
+	background-color: #00000000;
+	border: none;
+	grid-area: frame;
+}
+
+table{
+padding:0px 20px;
+	font-size: 2em;
+}
+td{
+padding: 0px 15px 15px 0px;
+}
+
+.Textakzentfarbe {
+	color: var(--akzentfarbe2);
+}
+.Textakzentfarbe1 {
+	color: var(--akzentfarbe1);
+	background-color: black;
+	padding: 0.3em 0.3em 0.1em;
+}
+.Textakzentfarbe2 {
+	color: var(--akzentfarbe3);
+	background-color: black;
+	padding: 0.3em 0.3em 0.1em;
+}
+.Textakzentfarbe3 {
+	color: var(--akzentfarbe4);
+	background-color: black;
+	padding: 0.3em 0.3em 0.1em;
+}
+.angebote{
+	margin-bottom: 20px;
+}
+details{
+	margin-left: 50px;
+}
+.anfahrt{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-gap: 20px;
+	justify-content: center;
+	align-content: center;
+}
+.anfahrt img {
+	object-fit: scale-down;
+	max-width: 100%;
+}
+.gallerie{
+	margin-top: 20px;
+	position: relative;
+}
+
+.gallerie-preview{
+	margin-top: 20px;
+	position: relative;
+	display: grid;
+	grid-template-columns: minmax(0px, 1fr) minmax(auto, 1110px) minmax(0px, 1fr);
+	grid-auto-rows: auto;
+	grid-gap: 20px;
+	grid-template-areas:	". beschreibung ."
+							". galerie ."
+							"baustelle baustelle baustelle"
+}
+
+.pswp-gallery {
+	grid-area: galerie;
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	grid-auto-rows: 150px;
+	grid-gap: 10px;
+}
+
+.pswp-gallery a {
+    color: #191919;
+}
+
+.pswp-gallery img{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.gallerie-preview .baustelle{
+	grid-area: baustelle;
+}
+
+.galerie-baustelle{
+	grid-area: beschreibung;
+	position: relative;
+	object-fit: cover;
+	max-height: 100%;
+	display: grid;
+	grid-template-columns: 3vw 1fr 3vw;
+	grid-template-rows: 1fr 50px auto 1fr;
+	background: black;
+}
+
+.galerie-baustelle img{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	grid-column: 1 / 4;
+	grid-row: 1 / 5;
+	opacity: 0.7;
+	z-index: 6;
+}
+
+.galerie-baustelle h2{
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 20px black;
+	z-index: 7;
+}
+.galerie-baustelle p{
+	grid-column: 2 / 3;
+	grid-row: 3 / 4;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 20px black;
+	z-index: 7;
+}
+
+footer{
+	margin-top: -20px;
+	background-color: var(--akzentfarbe3);
+}	
+.footergrid {
+	z-index: 1000;
+	grid-area: footer;
+	position: relative;
+	padding: 1rem;
+	display: grid;  
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+	height: 20vh;
+	grid-gap: 1rem;
+	width: max(70vh);
+	grid-template-columns: auto auto auto auto;
+	grid-template-rows: 20vh;
+}
+#logo_ejd {
+	height: 20vh;
+	width: 20vh;
+	background-color: #ffffff;
+	cursor: pointer;
+	border-radius: 10%;
+}
+#logo_ejp {
+	height: 20vh;
+	width: 20vh;
+	cursor: pointer;
+	border-radius: 10%;
+}
+#impressum {
+	text-align: center;
+	align-self: center;
+}
+
+.baustelle{
+	position: relative;
+	width: 100vw;
+	max-height: 50vh;
+	display: grid;
+	grid-template-columns: 3vw 1fr 3vw;
+	grid-template-rows: 1fr 50px auto 1fr;
+	background: black;
+}
+
+.baustelle img{
+	object-fit: cover;
+	max-height: 100%;
+	width: 100%;
+	grid-column: 1 / 4;
+	grid-row: 1 / 5;
+	opacity: 0.4;
+	z-index: 6;
+}
+
+.baustelle h2{
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 20px black;
+	z-index: 7;
+}
+.baustelle p{
+	grid-column: 2 / 3;
+	grid-row: 3 / 4;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 20px black;
+	z-index: 7;
+}
+.startscreen{
+	min-height: 100vh;
+	width: 100vw;
+	background-color: var(--akzentfarbe1);
+	display: grid;
+	grid-template-columns: 50px 1fr 50px;
+	grid-template-rows: 100px minmax(180px, 50vh) minmax(50px, auto) minmax(100px, auto);
+	grid-gap: 10px;
+	grid-template-areas: 	". . ."
+							". start-logo ."
+							". start-countdown ."
+							". start-text .";
+}
+.startscreen img{
+	grid-area: start-logo;
+	object-fit: cover;
+	max-height: 100%;
+	max-width: 100%;
+	/*max-width: 70vw;
+	max-height: 70vh;*/
+	justify-self: center;
+	align-self: center;
+}
+.startscreen p{
+	grid-area: start-text;
+	justify-self: start;
+	align-self: flex-start;
+	text-align: center;
+	padding: 0%;
+}
+#startscreentest{
+	font-size: 2em;
+	position: relative;
+	top: -3rem;
+}
+.startscreen .timer-feld{
+	grid-area: start-countdown;
+	justify-self: center;
+	align-self: center;
+	text-align: center;
+}
+
+/* Menüleiste */
+
+.artsch {
+	z-index: 100000;
+	height: 1rem;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	background-color: var(--akzentfarbe3);
+}
+#artsch {
+	text-align: center;
+	margin-top: -0.9rem;
+	font-size: small;
+	color: #000000;
+}
+.menu {
+	width: 100vw;
+	margin:0;
+	padding: 10px 0px;
+	position: fixed;
+	background: var(--akzentfarbe1);
+    display: grid;
+	top: 0;
+    grid-template-columns: 1fr 80px 10px repeat(5, auto) 1fr;
+	grid-template-rows: 80px;
+	grid-column-gap: 0;
+	grid-template-areas: ". btn1 . btn3 btn4 btn5 btn2 btn6 .";
+	z-index: 1000;
+}
+.btn{
+	text-decoration: none;
+	justify-self: stretch;
+	width: 100%;
+}
+
+.btn :hover{
+	color: var(--akzentfarbe2);
+	background: #00000055;
+	transition: all 200ms ease-in-out;
+}
+.btn :active{
+	background: black;
+	color: white;
+	transition: all 50ms ease-in-out;
+}
+.btn1{
+	grid-area: btn1;
+	position: relative;
+	transition: all 500ms;
+	justify-self: center;
+	align-self: center;
+}
+.btn2{
+	grid-area: btn2;
+	position: relative;
+	transition: all 500ms;
+	justify-self: center;
+	align-self: center;
+}
+.btn3{
+	grid-area: btn3;
+	position: relative;
+	transition: all 500ms;
+	justify-self: center;
+	align-self: center;
+}
+.btn4{
+	grid-area: btn4;
+	position: relative;
+	transition: all 500ms;
+	justify-self: center;
+	align-self: center;
+}
+.btn5{
+	grid-area: btn5;
+	position: relative;
+	transition: all 500ms;
+	justify-self: center;
+	align-self: center;
+}
+.btn6{
+	grid-area: btn6;
+	position: relative;
+	transition: all 500ms;
+	justify-self: center;
+	align-self: center;
+}
+.btn img{
+	object-fit: cover;
+	max-width: 100%;
+	transition: all 500ms;
+	animation: fadeIn 0.7s ease-in;
+	align-self: center;
+}
+.angebotgrid{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-auto-rows: 200px;
+	grid-gap: 10px;
+	margin: 20px 20px 0px;
+}
+.bandgrid{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-auto-rows: 400px;
+	grid-gap: 10px;
+	margin: 20px 20px 0px;
+}
+
+.band{
+	position: relative;
+	object-fit: fill;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 25px 1fr 25px;
+	grid-template-rows: minmax(20px, 1fr) 50px auto minmax(20px, 1fr);
+	grid-gap: 5px;
+	background: black;
+	z-index: 6;
+	margin-bottom: 20px;
+}
+
+.band img{
+	position: relative;
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	grid-column: 1 / 4;
+	grid-row: 1 / 5;
+	z-index: 6;
+	opacity: 0.5;
+}
+
+.band h2{
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 20px black;
+	z-index: 7;
+}
+.band p{
+	grid-column: 2 / 3;
+	grid-row: 3 / 4;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 20px black;
+	z-index: 7;
+}
+.band p a{
+	color:white;
+}
+.galerie-baustelle p a{
+	color:white;
+}
+.timer-feld{
+	background: var(--akzentfarbe1);
+	text-align: center;
+	
+}
+.countdown {
+	color: black;
+	font-size: 2em;
+    font-weight: 400;
+}
+
+.programm{
+	background:#F1F1F1;border-radius: 10px;
+	margin: 20px;
+}
+
+.embed-container { 
+	position: relative; 
+	overflow: hidden;
+	justify-content: center;
+	max-width: 95%;
+
+	padding: 1em; 
+} 
+
+@media (max-width: 600px) {
+	.embed-container iframe {
+		min-width: auto;
+	}
+} 
+/* ab hier kommt der Code für die Socialmedia Icons */
+
+.wrapper .icon{
+  position: fixed;
+  background-color: var(--akzentfarbe2);
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  border-radius: 50%;
+  margin: 10px;
+  width: 10rem;
+  height: 10rem;
+  line-height: 10.5rem;
+  font-size: 8rem;
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  color: #333;
+  text-decoration: none;
+}
+.wrapper .tooltip {
+  position: absolute;
+  right: -10px;
+  top: 0;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
+  background-color: var(--akzentfarbe2);
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: var(--akzentfarbe2);
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip {
+  top: -4rem;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: var(--akzentfarbe3);
+  color: #ffffff;
+}
+
+/* ab hier kommt der Code für die Änderungen abhängig von der Screen-Breite */
+
+@media screen and (min-width: 600px){
+	p, table{
+		font-size: 1.5em;
+		line-height: 1.5em;
+	}
+	h4 {
+		font-size: 2em;
+	}
+}
+@media screen and (orientation:landscape){
+	.menu {
+		grid-template-columns: 1fr 80px 10px repeat(5, auto) 1fr;
+		grid-template-areas: ". btn1 . btn2 btn3 btn4 btn5 btn6 .";
+	}
+	.baustelle{
+		grid-template-columns: 1fr 2fr 1fr;
+	}
+	.startscreen{
+		grid-template-columns: 1fr 800px 1fr;
+		grid-template-areas:". . ."
+							". start-logo ."
+							". start-countdown ."
+							". start-text .";
+	}
+	.infos{
+		display: grid;
+		grid-template-columns: 2fr minmax(350px, 1fr);
+		grid-template-rows: repeat(3, minmax(5px, auto));
+		grid-template-areas:	"einladung programm"
+								"mehrinfos programm"
+	}
+	.bandhigh{
+		grid-row: span 2;
+	}
+	.einladungstext{
+		grid-area: einladung;
+	}
+	.programm{
+		grid-area: programm;
+	}
+	.mehrinfos{
+		grid-area: mehrinfos;
+	}
+	
+
+	.embed-container { 
+		position: relative; 
+		overflow: hidden; 
+		max-width: 100%; 
+		justify-content: center;
+		height: 1400px;
+
+		width: 48vw; 
+		padding: 1em; 
+		overflow: hidden; 
+	} 
+
+	.embed-container iframe { 
+		position: relative; 
+		top: 0; 
+		left: 1rem;  
+		width: 90%; 
+		height: 100%; 
+		min-width: 30vw; 
+		min-height: 600px; 
+		border-radius: 1rem;
+	} 
+}
+
+@media screen and (orientation:portrait) {
+	
+.artsch {
+	z-index: 100000;
+	height: 2rem;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	background-color: var(--akzentfarbe3);
+}
+	.embed-container { 
+		height: 3100px;
+	}
+	.embed-container iframe { 
+		position: relative; 
+		top: 0; 
+		left: 1rem;  
+		width: 48%; 
+		height: 200%; 
+		min-height: 600px; 
+		border-radius: 1rem;
+
+		
+	
+		zoom: 2;
+		-moz-transform: scale(2);
+		-moz-transform-origin: 0 0;
+		-o-transform: scale(2);
+		-o-transform-origin: 0 0;
+		-webkit-transform: scale(2);
+		-webkit-transform-origin: 0 0;
+	} 
+	.bandgrid{
+		grid-auto-flow:row;
+	}
+	.bandhigh{
+		grid-column: span 2;
+	}
+	.bandwide{
+		grid-column: span 2;
+	}
+	/*.wrapper .icon{
+	  width: 100px;
+	  height: 100px;
+	line-height: 100px;
+	  font-size: 64px;
+	}
+	.wrapper .icon:hover .tooltip {
+	  opacity: 0;
+	}*/
+	.footergrid {
+		z-index: 1000;
+		grid-area: footer;
+		position: relative;
+		padding: 1rem;
+		display: grid;  
+		margin: auto;
+		width: 50%;
+		padding: 10px;
+		height: 10vh;
+		grid-gap: 1rem;
+		width: max(35vh);
+		grid-template-columns: repeat(3, minmax(0.1rem, auto));
+		grid-template-rows: 10vh;
+		grid-template-areas:	"impressum evjudd evjupir";
+	}
+	#logo_ejd {
+		grid-area: evjudd;
+		height: 10vh;
+		width: 10vh;
+		background-color: #ffffff;
+		cursor: pointer;
+		border-radius: 10%;
+	}
+	#logo_ejp {
+		grid-area: evjupir;
+		height: 10vh;
+		width: 10vh;
+		cursor: pointer;
+		border-radius: 10%;
+	}
+}
+
+@media screen and (min-width: 1200px){
+	.baustelle{
+		grid-template-columns: 1fr 600px 1fr;
+	}
+	.gallerie-preview{
+		grid-template-columns: 0px minmax(400px, 3fr) minmax(auto, 1110px) minmax(0px, 1fr);
+		grid-template-areas:	". beschreibung galerie ."
+								"baustelle baustelle baustelle baustelle"
+	}
+	.angebotgrid{
+		grid-auto-flow: dense;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-auto-rows: 300px;
+	}
+	.bandgrid{
+		grid-auto-flow: dense;
+	}
+	.bandhigh{
+		grid-row: span 2;
+	}
+	.bandwide{
+		grid-column: span 2;
+	}
+}
+
+@media screen and (min-width: 1680px){
+	.gallerie-preview{
+		grid-template-columns: minmax(10px, 1fr) minmax(400px, 1fr) minmax(auto, 1110px) minmax(10px, 1fr);
+		grid-template-areas:	". beschreibung galerie ."
+								"baustelle baustelle baustelle baustelle"
+	}
+}

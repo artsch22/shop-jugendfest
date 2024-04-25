@@ -1,0 +1,42 @@
+#banner {
+	position: fixed;
+	top: 0;
+	display: grid;
+	margin: 8vw;
+	padding: 2vw;
+	height: minmax(10rem, auto);
+	width: 80vw;
+	border-radius: 2rem;
+	column-gap: 2rem;
+	row-gap: 1rem;
+	grid-template-columns: auto;
+	grid-template-rows: 5rem auto auto;
+	grid-template-areas:"Title" 
+						"p"
+						"Box";
+	background-color: #32a5fe;
+	font-size: 1.7em;
+	z-index: 10;
+	border: none;
+}
+#banner #title{
+	grid-area: Title;
+	text-align: center;
+	font-size: 1.5em;
+	background-color: #00000000;
+}
+#banner #text{
+    grid-area: p;
+	font-size: 1em;
+    margin: 1rem;
+}
+#banner #true{grid-area: Box;}
+#banner .box{
+	display: block;
+	background-color: #deff31;
+	border-radius: 2rem;
+	text-align: center;
+	font-size: 1em;
+	padding: 1rem;
+	cursor: pointer;
+}

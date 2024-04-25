@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="./src/css/roboto/roboto-fontface.css">
+    <link rel="stylesheet" href="./src/css/roboto-condensed/roboto-condensed-fontface.css">
+    <link rel="stylesheet" href="./src/css/roboto-slab/roboto-slab-fontface.css">
+    <link rel="stylesheet" href="./src/css/kreatives-jugendfest/kreatives-jugendfest-fontface.css">
+	<link rel="stylesheet" href="./src/fontawesome-free-6.5.2-web/css/all.css">
+	<link rel="stylesheet" href="./src/Kreatives Jugendfest Style.css">
+	<link rel="stylesheet" href="./src/shop.css">
+	<link rel="stylesheet" href="./src/cookie.css">
+	<script src="./src/cookie-banner.js"></script>
+	<script src="./src/cookie.js"></script>
+	<title>Shop Kreatives Jugendfest</title>
+</head>
+<body class="shop-body" onload="cookiebanner();">
+<div id="shop" class="shop">
+	<div id="shop-headlines" class="shop-headlines">
+		<h1 id="shop-headlines-shop">Shop</h1>
+		<a id="shop-headlines-basket" class="jugendfest-font" href="./basket.html">Warenkorb</a>
+	</div>
+		<script src="src/shop-select.js"></script>
+		<script src="src/shop-tobasket.js"></script>
+		<script src="src/shop-basket.js"></script>
+		<script src="src/shop-alert.js"></script>
+		<button id="close" onclick="closeAlert()"></button>
+		<div class="shop-vorschau">
+			<p class="kleidungbeschreibung" id="shop-result"><b>T-Shirt</b></p>
+			<img id="shop-img" class="shop-img" src="Material/Shopvorschau/T-Shirt/AshGrey.jpg">
+			<p class="kleidungbeschreibung">* Abbildungen können vom Original abweichen.</p>
+		</div>
+		<div id="shop-select" class="shop-select">
+			<div id="shop-select-item" class="scroll">
+				<div id="k0" onclick="shopclick(this.id)">
+					<img class="img-select-img" id="img-k0" src="Material/Shopvorschau/T-Shirt.png"  style="border: 3px solid #000000;">
+					<p class="img-select-text">16€</p>
+				</div>
+				<div id="k1" onclick="shopclick(this.id)">
+				<img class="img-select-img" id="img-k1" src="Material/Shopvorschau/Sweatshirt.png">
+				<p class="img-select-text">30€</p>
+				</div>
+				<div id="k2" onclick="shopclick(this.id)">
+				<img class="img-select-img" id="img-k2" src="Material/Shopvorschau/HoodieMen.png">
+				<p class="img-select-text">37€</p>
+				</div>
+				<div id="k3" onclick="shopclick(this.id)">
+				<img class="img-select-img" id="img-k3" src="Material/Shopvorschau/HoodieLadie.png">
+				<p class="img-select-text">37€</p>
+				</div>
+			</div>
+			<p id="shop-selected-color"><b>Farbe: </b>Ash Grey</p>
+			<div id="shop-select-color" class="scroll">
+				<span class="img-color" id="c0" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="c1" onclick="shopclick(this.id)" style="border: 3px solid #000000;"></span>
+				<span class="img-color" id="c2" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="c3" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="c4" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="c5" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="c6" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="c7" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="c8" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="c9" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="ca" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="cb" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="cc" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="cd" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="ce" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="cf" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="cg" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="ch" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="ci" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="cj" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="ck" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="cl" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="cm" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="cn" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="co" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="cp" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="cq" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="cr" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="cs" onclick="shopclick(this.id)"></span>
+				<span class="img-color" id="ct" onclick="shopclick(this.id)"></span>
+			</div>
+			<p id="shop-selected-size"><b>Größe: </b>M</p>
+			<div id="shop-select-size" class="scroll">
+				<p class="shop-select-size-text" id="S0" onclick="shopclick(this.id)">XS</p>
+				<p class="shop-select-size-text" id="S1" onclick="shopclick(this.id)">S</p>
+				<p class="shop-select-size-text" id="S2" onclick="shopclick(this.id)" style="border: 3px solid #000000;">M</p>
+				<p class="shop-select-size-text" id="S3" onclick="shopclick(this.id)">L</p>
+				<p class="shop-select-size-text" id="S4" onclick="shopclick(this.id)">XL</p>
+				<p class="shop-select-size-text" id="S5" onclick="shopclick(this.id)">XXL</p>
+			</div>
+			<span id="quantity" onclick="selectQuantity('shop');"><p id="quantity-text"><b>Menge: </b></p><p id="quantity-val">1</p><i class="fa-solid fa-chevron-down" id="dropdown"></i><!--<svg class="dropdown"><path fill="none" d="M 5,25 45,55 85,25"/></svg>--></span>
+			<span id="to-basket" class="jugendfest-font" onclick="tobasket()">In den Einkaufswagen</span>
+		</div>
+		<div id="shop-text" class="shop-text">
+			<p>Jedes Jahr gibt es von dem <b>Kreativen Jugendfest Klamotten</b> mit sehr coolen Prints. Es gibt T-Shirts in unisex fit, Sweatshirt in unisex fit und Hoodies in male oder female fit. Die Klamotten sind von 
+				<a class="unbolt" href="https://neutral.com/" target="_blank">Neutral</a>
+			bio und fair produziert und werden in Leipzig bedruckt. </p>
+			<p><b class="Textakzentfarbe3"> Die Klamotten können bis zum 20. Mai bestellt werden!</b></p>
+		</div>
+		<div id="shop-abholung" class="shop-abholung">
+			<p id="headline-abholung" class="shop-abholung-inner"><b><span class="Textakzentfarbe1">Abholung:</span></b></p>
+			<p id="shop-abholung-Pirna" class="shop-abholung-inner"><b>Pirna: </b>In der KJB Pirna auf der Rosa-Luxemburg-Straße 29, 01796 Pirna. Damit jemand vor Ort ist bitte bei 
+				<a id="underline-link" href="https://www.kirchenbezirk-pirna.de/ueber-uns/mitarbeitendefachberatende#r1247" target="_blank" >Beate</a> melden oder beim 
+				<a id="underline-link" href="https://landing.churchdesk.com/e/27613213/sommer-jugendgottesdienst?utm_medium=Widgets&utm_campaign=alle-ereignisse" target="_blank" >Sommer JuGo</a>
+				 am 15. Juni in Lohmen.</p>
+			<p id="shop-abholung-Dresden" class="shop-abholung-inner"><b>Dresden: </b>In der Jugendkirche Dresden am Trinitatisplatz 1, 01307 Dresden. Zu den Öffnungszeiten des 
+				<a id="underline-link" href="http://jz-trini.de/willKOMMen.htm" target="_blank">"Jugendtreff Trini"</a> (Dienstag - Freitag 13.00 - 18.00 Uhr) oder in dem Büro EvJuDD dafür bei
+				<a id="underline-link" href="https://www.evangelische-jugend-dresden.de/jugendverband/kontakt" target="_blank">Ludwig</a> melden.</p>
+			<p id="shop-abholung-JG" class="shop-abholung-inner"><b>JG: </b>Als JG könnt ihr eine Sammelabholung machen und alle Sachen auf einmal in Dresden oder Pirna abholen.</p>
+		</div>
+		<div id="shop-bezahlung">
+			<p id="headline-abholung" class="shop-abholung-inner"><b><span class="Textakzentfarbe1">Bezahlung:</span></b></p>
+			<p id="shop-abholung-Pirna" class="shop-abholung-inner"><b>Überweisung: </b>Bei uns kannst du nur per Überweisung (Vorkasse) zahlen. Weitere Infos bekommst du beim Bestellen.</p>
+		</div>
+	</div>
+	<footer>
+		<div class="footergrid">
+			<p id="impressum"><a href="http://www.kirchenbezirk-pirna.de/Impressum_und_Datenschutz.422/" target="_blank">Impressum</a></p>
+			<a href="https://jugendfest.de/"><img id="logo_ejp" src="Material/Logo_Ev_Jugend_Pirna_1-farbig schwarz.png" href=""></a>
+			<a href="https://evangelische-jugend-dresden.de"><img id="logo_ejd" src="https://www.evangelische-jugend-dresden.de/typo3conf/ext/ejd_websites/Resources/Public/Images/logo_ejd.svg"></a>
+			<p>Entwickelt von Artur <a href="https://github.com/artsch22/">@artsch22</a></p>
+		</div>
+	</footer>
+</body>
+</html>

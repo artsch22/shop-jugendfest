@@ -1,0 +1,513 @@
+@charset "utf-8";
+/* CSS Document */
+.shop{
+	position: relative;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: repeat(5, auto);
+	grid-template-areas:	"headlines"
+							"vorschau"
+							"auswahl"
+							"shoptext"
+							"abholung"
+							"bezahlung";
+}
+p{
+	font-size: 2em;
+}
+
+.shop-headlines{
+	grid-area: headlines;
+}
+#shop-headlines{
+	grid-area: headlines;
+	display: grid;
+	grid-template-columns: 30% 70%;
+	grid-template-rows: 10rem;
+	grid-template-areas: "shop basket";
+}
+#shop-headlines-shop{
+	grid-area: shop;
+	height: 6rem;
+	margin: 0em;
+}
+#shop-headlines-basket{
+	grid-area: basket;
+	display: block;
+	height: 5rem;
+	width: 12rem;
+	justify-self: right;
+	text-align: center;
+	margin: 1rem;
+	border-radius: 5.5rem;
+	background-color: #ffad01;
+    text-decoration: none;
+	font-size: 2em;
+	line-height: 5rem;
+    border: none;
+    color: #000000;
+}
+.shop-text{
+	grid-area: shoptext;
+}
+.shop-vorschau{
+	grid-area: vorschau;
+	position: relative;
+	z-index: 0;
+}
+
+#close{
+	display: none;
+	position: fixed;
+	background-color: #00000000;
+	border: none;
+	z-index: 5;
+	height: 100vh;
+	width: 100vw;
+}
+
+#shop-result{
+	font-size: 3em;
+	top: 0rem;
+}
+.shop-img{
+	width: 96%;
+	height: auto;
+	padding-top: 2rem;
+	justify-self: center;
+	align-self: center;
+}
+.kleidungbeschreibung{ 
+	position: relative;
+	z-index: 1;
+	height: 0;
+	top: -4rem;
+	text-align: center;
+	margin: 0rem;
+	padding: 0rem;
+	font-size: 1em;
+}
+.scroll{
+overflow: scroll;
+}
+.shop-select{
+	grid-area: auswahl;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 16rem 3rem 11rem 3rem 9rem 9rem 5rem;
+	grid-template-areas:	"select-item"
+							"selected-color"
+							"select-color"
+							"selected-size"
+							"select-size"
+							"select-quantity"
+							"basket";
+}
+#shop-select-item{
+	grid-area: select-item;
+	display: grid;
+	grid-template-columns: auto repeat(minmax(3,4), 10rem) auto;
+	grid-template-rows: 10rem;
+	column-gap: 2rem;
+	grid-template-areas:". k0 k1 k2 k3 . ";
+}
+.img-select-img{
+	cursor: pointer;
+	height: 10rem;
+	width: 10rem;
+	border: 3px solid #dadada;
+	border-radius: 50%;
+}
+.img-select-text{
+	position: relative;
+	display: block;
+	top: -2rem;
+	height: 0rem;
+	text-align: center;
+}
+#k0{ grid-area: k0;}
+#k1{ grid-area: k1;}
+#k2{ grid-area: k2;}
+#k3{ grid-area: k3;}
+
+#shop-selected-color{
+	grid-area: selected-color;
+	position: relative;
+	top: -3rem;
+}
+#shop-select-color{
+	grid-area: select-color;
+	display: grid;
+	grid-template-columns: repeat(minmax(24,30), 10rem);
+	grid-template-rows: 10rem;
+	column-gap: 2rem;
+	grid-template-areas:"c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf cg ch ci cj ck cl cm cn co cp cq cr cs ct";
+}
+
+.img-color{
+	cursor: pointer;
+	height: 10rem;
+	width: 10rem;
+	display: block;
+	border: 2px solid #dadada;
+	border-radius: 50%;
+}
+#c0{ grid-area: c0; background: #ffffff;}
+#c1{ grid-area: c1; background: #dfdfdf;}
+#c2{ grid-area: c2; background: #b8b8b8;}
+#c3{ grid-area: c3; background: #53565a;}
+#c4{ grid-area: c4; background: #3a3a3a;}
+#c5{ grid-area: c5; background: #000000;}
+#c6{ grid-area: c6; background: #eabedb;}
+#c7{ grid-area: c7; background: #d0006f;}
+#c8{ grid-area: c8; background: #d50032;}
+#c9{ grid-area: c9; background: #fe5000;}
+#ca{ grid-area: ca; background: #faaf3f;}
+#cb{ grid-area: cb; background: #f8e08e;}
+#cc{ grid-area: cc; background: #ffe44f;}
+#cd{ grid-area: cd; background: #63d05a;}
+#ce{ grid-area: ce; background: #009a44;}
+#cf{ grid-area: cf; background: #215732;}
+#cg{ grid-area: cg; background: #5f8289;}
+#ch{ grid-area: ch; background: #86c8bc;}
+#ci{ grid-area: ci; background: #abcae9;}
+#cj{ grid-area: cj; background: #00cdf2;}
+#ck{ grid-area: ck; background: #3f6e68;}
+#cl{ grid-area: cl; background: #0033a0;}
+#cm{ grid-area: cm; background: #1f2a44;}
+#cn{ grid-area: cn; background: #765ba7;}
+#co{ grid-area: co; background: #c6b0bc;}
+#cp{ grid-area: cp; background: #6c1d45;}
+#cq{ grid-area: cq; background: #382f2d;}
+#cr{ grid-area: cr; background: #3e4827;}
+#cs{ grid-area: cs; background: #fffad9;}
+#ct{ grid-area: ct; background: #d2c7c4;}
+
+#shop-selected-size{
+	grid-area: selected-size;
+	position: relative;
+	top: -1rem;
+}
+#shop-select-size{
+	grid-area: select-size;
+	display: grid;
+	grid-template-columns: auto repeat(6, 4rem) auto;
+	grid-template-rows: 4rem;
+	column-gap: 3rem;
+	grid-template-areas:". S0 S1 S2 S3 S4 S5 .";
+}
+.shop-select-size-text{
+	text-align: center;
+	display: block;
+	border: 2px solid #dadada;
+	border-radius: 20%;
+	height: 3rem;
+	width: 3rem;
+	cursor: pointer;
+}
+#S0{grid-area: S0;}
+#S1{grid-area: S1;}
+#S2{grid-area: S2;}
+#S3{grid-area: S3;}
+#S4{grid-area: S4;}
+#S5{grid-area: S5;}
+
+#quantity{
+	grid-area: select-quantity;
+	display: grid;
+	grid-template-columns: 7rem auto auto 1rem;
+	grid-template-areas: "Menge Number Arrow .";
+	height: 5rem;
+	width: 80%;
+	background-color: #dadada;
+	margin: 1rem;
+	border-radius: 2.5rem;
+	justify-self: center;
+	align-self: center;
+	cursor: pointer;
+}
+#quantity-text{
+	grid-area: Menge;
+	position: relative;
+	margin: 0.5rem;
+	width: 100%;
+}
+#quantity-val{
+	grid-area: Number;
+	position: relative;
+	text-align: left;
+	margin: 0.5rem;
+	width: 10%;
+}
+#dropdown{
+	color: #000;
+	font-size: 4.5em;
+	grid-area: Arrow;
+	justify-self: right;
+}
+
+#to-basket{
+	grid-area: basket;
+	display: block;
+	height: 5rem;
+	width: 80%;
+	justify-self: center;
+	align-self: center;
+	text-align: center;
+	line-height: 4.5rem;
+	border-radius: 5.5rem;
+	background-color: #ffad01;
+	font-size: 2.5em;
+	cursor: pointer;
+}
+
+.shop-abholung{
+	grid-area: abholung;
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:	"headlineabholung"
+							"abholungPirna"
+							"abholungDresden"
+							"abholungJG";
+}
+.shop-abholung-inner{
+	padding: 0%;
+	padding-right: 1rem;
+}
+#headline-abholung{
+	grid-area: headlineabholung;
+}
+#shop-abholung-Pirna{
+	grid-area: abholungPirna;
+}
+#shop-abholung-Dresden{
+	grid-area: abholungDresden;
+}
+#shop-abholung-JG{
+	grid-area: abholungJG;
+}
+#shop-bezahlung{
+	grid-area: bezahlung;
+	padding: 1rem;
+}
+
+/* ab hier kommt der Code für die Alerts */
+
+#to-basket-alert{
+	display: grid;
+	position: fixed;
+	top: 10vh;
+	margin: 13.5%;
+	height: minmax(5rem, auto);
+	width: 65%;
+	padding: 1rem;
+	padding-top: 0rem;
+	border-radius: 2rem;
+	column-gap: 1rem;
+	grid-template-columns: repeat(2, 48.5%);
+	grid-template-rows: auto auto;
+	grid-template-areas:"Text Text"
+						"Box1 Box2"	;
+	background-color: #ffa50e;
+	font-size: 1em;
+	text-align: center;
+	z-index: 10;
+	opacity: 95%;
+}
+#to-basket-alert #Text{
+	grid-area: Text; 
+	font-size: 1.7em;
+}
+#to-basket-alert .box{
+	display: block;
+	height: 5rem;
+	width: 100%;
+	background-color: #dede31;
+	border-radius: 2rem;
+	text-align: center;
+	line-height: 2.5em;
+	font-size: 1.8em;
+	cursor: pointer;
+}
+#to-basket-alert #box1{
+	grid-area: Box1;
+}
+#to-basket-alert #box2{
+	grid-area: Box2;
+}
+
+#select-quantity-alert{
+	display: block;
+	position: fixed;
+	margin: 15%;
+	height: 80vh;
+	width: 70%;
+	padding: 0rem;
+	border-radius: 2rem;
+	z-index: 10;
+	cursor: pointer;
+}
+#select-quantity-alert table{
+	display: block;
+	height: 80vh;
+	width: 100%;
+	padding: 0rem;
+	border-radius: 2rem;
+	border: 2px solid #999999;
+	background-color: #e9e9e9;
+	text-align: center;
+	z-index: 10;
+	border-collapse: collapse;
+	line-height: 10vh;
+	font-size: 2em;
+}
+#select-quantity-alert td, #select-quantity-alert th{
+	display: block;
+	width: auto;
+	border-top: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+	height: 100%;
+	width: 69vw;
+}
+#select-quantity-alert th{
+	border-top: 0px none #00000000;
+}
+#td-10{
+	border-bottom: 0px none #00000000;
+}
+/* ab hier kommt der Code für die Änderungen abhängig von der Screen-Breite */
+@media screen and (orientation:landscape){
+	#basket, #buy, #exit, #thx{
+		display: block;
+		max-width: 100vh;
+		min-height: 100vh;
+		margin: auto;
+		align-self: center;
+		justify-self: center;
+		background-color: #ffffff;
+	}
+	body{
+		background-color: #eee;
+	}
+	.shop-body{
+		background-color: #fff;
+	}
+	.shop{
+		position: relative;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas:	"headlines headlines"
+								"shoptext shoptext"
+								"vorschau auswahl "
+								"abholung auswahl"
+								"abholung bezahlung";
+	}
+	.shop-text{
+		display: block;
+		width: 80%;
+		justify-self: center;
+	}
+	#select-quantity-alert{
+		top: -10vh;
+		width: 30rem;
+		margin: 10%;
+	}
+	#select-quantity-alert td, #select-quantity-alert th{
+		width: 440%;
+	}
+
+	#to-basket-alert{
+		position: absolute;
+		top: 70vh;
+	}
+}
+/*
+@media screen and (orientation:landscape){
+	.shop{
+		display: grid;
+		grid-template-columns: 50vw 50vw;
+		grid-template-rows: repeat(8, minmax(5px, auto));
+		grid-template-areas:	"headlines  headlines"
+								"shoptext  shoptext"
+								"vorschautext  vorschautext"
+								"vorschau vorschau"
+								"kleidungbeschreibung kleidungbeschreibung"
+								"auswahl auswahl"
+								"shopbeschreibung shopbeschreibung"
+								"abholung abholung"
+	}
+	.shop-img{
+		width: 40vw;
+		height: auto;
+		padding: 1rem;
+		justify-self: center;
+		align-self: center;
+	}
+	.img-vorschau-img{
+		cursor: pointer;
+		justify-self: center;
+		align-self: center;
+		height: auto;
+		width: 4vw;
+	}
+	.shop-vorschau-text{
+		grid-area: vorschautext;
+		display: block;
+	}
+	.shop-headlines{
+		grid-area: headlines
+	}
+	.shop-img{
+		grid-area: vorschau;
+	}
+	.shop-beschreibung{
+		grid-area: shopbeschreibung;
+	}
+	.shop-formular{
+		grid-area: formular;
+	}
+	.shop-formular-frame{
+		grid-area: formular;
+		background-color: #f1f1f1;
+		padding: 1rem;
+	}
+	.shop-text{
+		grid-area: shoptext;
+	}
+	.shop-select{
+		grid-area: auswahl;
+		display: grid;
+		padding: 1rem;
+		grid-template-columns: repeat(20, minmax(1rem, auto));
+		grid-template-rows: repeat(4, minmax(2rem, auto));
+		grid-gap: 0.4rem;
+		grid-template-areas:	"k0 k0 k0 k0 k0 k1 k1 k1 k1 k1 k2 k2 k2 k2 k2 k3 k3 k3 k3 k3"
+								"c0 c0 c1 c1 c2 c2 c3 c3 c4 c4 c5 c5 c6 c6 c7 c7 c8 c8 c9 c9"
+								"ca ca cb cb cc cc ce ce cd cd cf cf cg cg ch ch ci ci cj cj"
+								"ck ck cl cl cm cm cn cn co co cp cp cq cq cr cr cs cs ct ct"
+	}
+	.shop-abholung{
+		grid-area: abholung;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0.1rem, auto));
+		grid-template-rows: repeat(2, minmax(0.1rem, auto));
+		grid-template-areas:	"headlineabholung headlineabholung headlineabholung"
+								"abholungPirna abholungDresden abholungJG";
+	}
+	.headline-abholung{
+		grid-area: headlineabholung;
+	}
+	.shop-abholung-Pirna{
+		grid-area: abholungPirna;
+	}
+	.shop-abholung-Dresden{
+		grid-area: abholungDresden;
+	}
+	.shop-abholung-JG{
+		grid-area: abholungJG;
+	}
+}
+*/

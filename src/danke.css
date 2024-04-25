@@ -1,0 +1,48 @@
+.thx{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:"headline"
+                        "thxContent"
+                        "link"; 
+}
+#thx-headline{
+    grid-area: headline;
+}
+#thx-content{
+    display: block;
+    grid-area: thxContent;
+    height: auto;
+    margin: 1rem;
+    text-align: center;
+}
+.thx-link{
+    grid-area: link;
+    display: grid;
+    position: relative;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:"web shop"; 
+}
+#back-to-website{
+    grid-area: web;
+}
+#back-to-shop{
+    grid-area: shop;
+    cursor: pointer;
+    display: block;
+}
+.thx-link a{
+    width: 90%;
+    height: 6rem;
+    background-color: #ffad01;
+    border-radius: 3rem;
+    justify-self: center;
+    text-decoration: none;
+    border: none;
+}
+.thx-link p{
+    color: #000000;
+    text-align: center;
+    line-height: 1rem;
+}

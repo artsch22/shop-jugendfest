@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title> JF Gallery Test</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="src/gallery.css">
+        <link rel="stylesheet" href="src/Kreatives Jugendfest Style.css">
+        <link rel="stylesheet" href="src/photoswipe.css">
+        <script>
+        function ChangeYear(year) {
+            iframeSource = "Bildergallerie.html?"
+
+            document.getElementsByClassName("active-btn")[0].className = "flex-element btn";
+            document.getElementById("btn" + year).className = "flex-element btn active-btn";
+            document.getElementById("iframe-gallery").src = iframeSource + year;
+        }
+        </script>
+    </head>
+    <body>
+        <div class="yearbuttons" onload="ChangeYear('2021')">
+            <!-- <div class="flex-element"></div> -->
+            <button class="flex-element btn" id="btn2020" onclick="ChangeYear('2020')"><h4>2020</h4></button>
+            <button class="flex-element btn" id="btn2021" onclick="ChangeYear('2021')"><h4>2021</h4></button>
+            <button class="flex-element btn" id="btn2022" onclick="ChangeYear('2022')"><h4>2022</h4></button>
+            <button class="flex-element btn active-btn" id="btn2023" onclick="ChangeYear('2023')"><h4>2023</h4></button>
+            <!-- <div class="flex-element"></div> -->
+        </div>
+        <div id="app">
+            <iframe id="iframe-gallery" class="embedded-gallery" src="Bildergallerie.html?2023" frameborder="0"></iframe>
+        </div>
+    </body>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="src/cookie-banner.js"></script>
+        <title>Cookie Banner</title>
+        <style>
+            #banner-div{
+                display: grid;
+                margin: auto;
+                height: minmax(10rem, auto);
+                width: 90vw;
+                padding: 2rem;
+                border-radius: 2rem;
+                column-gap: 2rem;
+                row-gap: 1rem;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto auto;
+                grid-template-areas:"Title Title" 
+                                    "Text1 Text2"
+                                    ". ."
+                                    "Box1 Box2";
+                background-color: #32a5fe;
+                font-size: 2rem;
+            }
+            #title{
+                grid-area: Title;
+                text-align: center;
+                background-color: #00000000;
+            }
+            #essentiell{
+                grid-area: Text1;
+            }
+            #funktional{
+                grid-area: Text2;
+            }
+            #false{
+                grid-area: Box1;
+            }
+            #true{
+                grid-area: Box2;
+            }
+            .box{
+                display: block;
+                height: 5rem;
+                width: 44vw;
+                background-color: #deff31;
+                border-radius: 2rem;
+                text-align: center;
+                line-height: 8vw;
+                font-size: 4vw;
+                cursor: pointer;
+            }
+        </style>
+	    <script src="./src/cookie-banner.js"></script>
+    </head>
+    <body>
+        <div id="banner-div" style="display: grid;margin: auto;height: minmax(10rem, auto);width: 90vw;padding: 2rem;border-radius: 2rem;column-gap: 2rem;row-gap: 1rem;grid-template-columns: auto auto;grid-template-rows: auto auto auto;grid-template-areas:'Title Title' 'Text1 Text2''. .''Box1 Box2';background-color: #32a5fe;font-size: 2rem;">
+            <h1 id="title" style="grid-area: Title;text-align: center;">Wir verwenden Cookies</h1>
+            <p id="essentiell" style="grid-area: Text1;">
+                <b>Essentielle Cookies:</b></br>
+                Werden für die Speicherung des Cookiebanners verwendet.
+            </p>
+            <p id="funktional" style="grid-area: Text2;">
+                <b>Funktionale Cookies:</b></br>
+            Werden für die Speicherung des Warenkorbs verwendet</p>
+            <span class="box" id="false" style="grid-area: Box1;display: block;height: 5rem;width: 44vw;background-color: #deff31;border-radius: 2rem;text-align: center;line-height: 8vw;font-size: 4vw;cursor: pointer;">nur essentielle Cookies</span>
+            <span class="box" id="true" style="grid-area: Box2;display: block;height: 5rem;width: 44vw;background-color: #deff31;border-radius: 2rem;text-align: center;line-height: 8vw;font-size: 4vw;cursor: pointer;">alle Cookies</span>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,134 @@
+.buy{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:"headline"
+                        "buyInput"; 
+}
+#buy-headline{
+    grid-area: headline;
+}
+#buy-form{
+    grid-area: buyInput;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:"Input"
+                        "link"
+                        "abholort"; 
+}
+#buy-input{
+    grid-area: Input;
+    display: grid;
+    position: relative;
+    gap: 1rem;
+    width: 80%;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:"textFname" 
+                        "fieldFname"
+                        "textName" 
+                        "fieldName"
+                        "textMail" 
+                        "fieldMail"
+                        "textAbholort" 
+                        "fieldAbholort"
+                        "textJg" 
+                        "fieldJg"; 
+    padding: 10%;
+    justify-self: center;
+	align-self: center;
+}
+#buy-input input, #buy-input select, #buy-input label{
+    font-size: 1.8em;
+}
+#text-fname{
+    grid-area: textFname;
+    text-align: left;
+}
+#field-fname{
+    grid-area: fieldFname;
+}
+#text-name{
+    grid-area: textName;
+    text-align: left;
+}
+#field-name{
+    grid-area: fieldName;
+}
+#text-mail{
+    grid-area: textMail;
+    text-align: left;
+}
+#field-mail{
+    grid-area: fieldMail;
+}
+#text-abholort{
+    grid-area: textAbholort;
+    text-align: left;
+}
+#field-abholort{
+    grid-area: fieldAbholort;
+}
+#text-jg{
+    grid-area: textJg;
+    text-align: left;
+}
+#field-jg{
+    grid-area: fieldJg;
+}
+.input-jg{
+    display: none;
+}
+input, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.buy-link{
+    grid-area: link;
+    display: grid;
+    position: relative;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 6rem;
+    grid-template-areas:"basket buy"; 
+}
+#back-to-basket{
+    grid-area: basket;
+}
+#send-form-bg{
+    grid-area: buy;
+    cursor: pointer;
+    display: block;
+}
+#send-form{
+    grid-area: buy;
+    cursor: pointer;
+    display: block;
+    background-color: #00000000;
+}
+.buy-link a, .buy-link span, .buy-link input{
+    width: 90%;
+    height: 6rem;
+    background-color: #ffad01;
+    border-radius: 3rem;
+    justify-self: center;
+    text-decoration: none;
+    border: none;
+}
+.buy-link p{
+    color: #000000;
+    text-align: center;
+    justify-self: center;
+    height: 6rem;
+    line-height: 6rem;
+    margin: 0px;
+    padding: 0px;
+}
+#buy-abholung{
+    grid-area: abholort;
+}

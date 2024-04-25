@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="./src/css/roboto/roboto-fontface.css">
+    <link rel="stylesheet" href="./src/css/roboto-condensed/roboto-condensed-fontface.css">
+    <link rel="stylesheet" href="./src/css/roboto-slab/roboto-slab-fontface.css">
+	<link rel="stylesheet" href="./src/Kreatives Jugendfest Style.css">
+    <link rel="stylesheet" href="./src/css/kreatives-jugendfest/kreatives-jugendfest-fontface.css">
+	<link rel="stylesheet" href="./src/shop.css">
+	<link rel="stylesheet" href="./src/basket.css">
+	<link rel="stylesheet" href="./src/buy.css">
+	<link rel="stylesheet" href="./src/cookie.css">
+	<link rel="stylesheet" href="./src/photoswipe.css">
+	<script src="./src/cookie-banner.js"></script>
+	<script src="./src/cookie.js"></script>
+	<title>Kasse Kreatives Jugendfest</title>
+</head>
+<body onload='cookiebanner(); fillPerson(); setTimeout(abholortJG, 1);'>
+    <div id="buy" class="buy">
+		<script src="src/shop-select.js"></script>
+		<script src="src/shop-tobasket.js"></script>
+		<script src="src/shop-basket.js"></script>
+        <script src="src/shop-alert.js"></script>
+        <script src="src/shop-buy.js"></script>
+		<button id="close" onclick="closeAlert()"></button>
+	    <div id="buy-headline" class="shop-headlines">
+		    <h1>Kasse</h1>
+	    </div>
+        <form id="buy-form" method="dialog" onsubmit="sendBuy();" action="">
+            <div id="buy-input" >
+                <label id="text-fname" for="fname">Vorname:</label>
+                <input id="field-fname" type="text" name="fname" onclick="inputCheckForm(this.id);" autocomplete="given-name" required>
+                <label id="text-name" for="lname">Nachname:</label>
+                <input id="field-name" type="text" name="lname" onclick="inputCheckForm(this.id);" autocomplete="family-name" required>
+                <label id="text-mail" for="mail">E-Mail Adresse:</label>
+                <input id="field-mail" type="email" name="mail" onclick="inputCheckForm(this.id);" autocomplete="email" required>
+                <label id="text-abholort" for="abholort">Abholort:</label>
+                <select id="field-abholort" type="text" name="abholort" onchange="abholortJG();">
+                    <option value="Jugendkirche Dresden" onclick="abholortJG();">Jugendkirche Dresden</option>
+                    <option value="KJB Pirna" onclick="abholortJG();">KJB Pirna</option>
+                    <option value="JG" onclick="abholortJG();">JG</option>
+                </select>
+                <label id="text-jg" class="input-jg" for="jg">JG:</label>
+                <input id="field-jg" class="input-jg" type="text" name="jg" onclick="inputCheckForm(this.id);">
+            </div>
+            <div class="buy-link">
+                <a id="back-to-basket" href="./basket.html"><p class="jugendfest-font"><b>zum Warenkorb</b></p></a>
+                <span id="send-form-bg"><p class="jugendfest-font"><b>weiter</b></p></span>
+                <input id="send-form" type="submit" onclick="setTimeout(checkForm, 1);"value=""></input>
+            </div>
+		<div id="buy-abholung" class="shop-abholung">
+			<p id="headline-abholung" class="shop-abholung-inner"><b><span class="Textakzentfarbe1">Abholung:</span></b></p>
+			<p id="shop-abholung-Pirna" class="shop-abholung-inner"><b>Pirna: </b>In der KJB Pirna auf der Rosa-Luxemburg-Straße 29, 01796 Pirna. Damit jemand vor Ort ist bitte bei 
+				<a id="underline-link" href="https://www.kirchenbezirk-pirna.de/ueber-uns/mitarbeitendefachberatende#r1247" target="_blank" >Beate</a> melden oder beim 
+				<a id="underline-link" href="https://landing.churchdesk.com/e/27613213/sommer-jugendgottesdienst?utm_medium=Widgets&utm_campaign=alle-ereignisse" target="_blank" >Sommer JuGo</a>
+				 am 15. Juni in Lohmen.</p>
+			<p id="shop-abholung-Dresden" class="shop-abholung-inner"><b>Dresden: </b>In der Jugendkirche Dresden am Trinitatisplatz 1, 01307 Dresden. Zu den Öffnungszeiten des 
+				<a id="underline-link" href="http://jz-trini.de/willKOMMen.htm" target="_blank">"Jugendtreff Trini"</a> (Dienstag - Freitag 13.00 - 18.00 Uhr) oder in dem Büro EvJuDD dafür bei
+				<a id="underline-link" href="https://www.evangelische-jugend-dresden.de/jugendverband/kontakt" target="_blank">Ludwig</a> melden.</p>
+			<p id="shop-abholung-JG" class="shop-abholung-inner"><b>JG: </b>Als JG könnt ihr eine Sammelabholung machen und alle Sachen auf einmal in Dresden oder Pirna abholen.</p>
+		</div>
+        </form>
+    </div>
+	<footer>
+		<div class="footergrid">
+			<p id="impressum"><a href="http://www.kirchenbezirk-pirna.de/Impressum_und_Datenschutz.422/" target="_blank">Impressum</a></p>
+			<a href="https://jugendfest.de/"><img id="logo_ejp" src="Material/Logo_Ev_Jugend_Pirna_1-farbig schwarz.png" href=""></a>
+			<a href="https://evangelische-jugend-dresden.de"><img id="logo_ejd" src="https://www.evangelische-jugend-dresden.de/typo3conf/ext/ejd_websites/Resources/Public/Images/logo_ejd.svg"></a>
+			<p>Entwickelt von Artur <a href="https://github.com/artsch22/">@artsch22</a></p>
+		</div>
+	</footer>
+</body>
+</html>

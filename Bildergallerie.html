@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="src/gallery.css">
+        <link rel="stylesheet" href="src/Kreatives Jugendfest Style.css">
+        <link rel="stylesheet" href="src/photoswipe.css">
+        <script src="src/GallerySkript.js"></script>
+    </head>
+    <body id="gallerie-preview">
+        <div class="pswp-gallery pswp-gallery--responsive-images" id="my-gallery">
+            <img src="Material/falling-bread-bread.gif" alt="Umfalledes Toastbrot" style="margin: auto; width: 160vh; height: 90vh;">
+        </div>
+        <script>
+        console.log("Requested Year: " + location.search.substring(1));
+        ImportImage(location.search.substring(1));
+        </script>
+        <script type="module">
+            import PhotoSwipeLightbox from '/src/photoswipe-lightbox.esm.js';
+            const options = {
+                gallery: '#my-gallery',
+                children: 'a',
+                pswpModule: () => import('/src/photoswipe.esm.js')
+            };
+            const lightbox = new PhotoSwipeLightbox(options);
+            lightbox.init();
+        </script>
+    </body>
